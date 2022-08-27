@@ -1,0 +1,28 @@
+function Card(props) {
+    const chooseCard = (pokemon) => {
+        if(!props.chosenPokemon.includes(pokemon)) {
+            if(props.chosenPokemon.length + 1 === props.currentPokemon.length) {
+                props.setCurrentPokemon(props.allPokemon.slice(0,props.currentPokemon.length + 3));
+                props.setChosenPokemon([]);
+            } else {
+                props.setChosenPokemon(current => [...current, pokemon]);
+            }
+            props.setCurrentScore(props.currentScore + 1);
+        } else {
+            if(props.highScore < props.currentScore) {
+                props.setHighScore(props.currentScore);
+            }
+            props.setCurrentScore(0);
+            props.setCurrentPokemon(props.allPokemon.slice(0,3));
+            props.setChosenPokemon([]);
+        }
+    }
+    
+    return (
+        <div className='flex-item' onClick={() => chooseCard(props.image)}>
+            <img alt='pokemon' src={`https://archives.bulbagarden.net/media/upload/thumb/${props.image}`} />
+        </div>
+    );
+}
+  
+export default Card;
