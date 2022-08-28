@@ -20,7 +20,7 @@ function Card(props) {
     
     return (
         <div className='flex-item' onClick={() => chooseCard(props.image)}>
-            <img alt='pokemon' src={`https://archives.bulbagarden.net/media/upload/thumb/${props.image}`} />
+            <img alt='pokemon' src={`/src/images/${props.image}`} />
         </div>
     );
 }
