@@ -19,7 +19,7 @@ function Card(props) {
     }
     
     return (
-        <div className='flex-item' onClick={() => chooseCard(props.image)}>
+        <div className='fade-in' onClick={() => chooseCard(props.image)}>
             <img alt='pokemon' src={props.image} />
         </div>
     );

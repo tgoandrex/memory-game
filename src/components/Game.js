@@ -12,8 +12,6 @@ import sceptile from '../images/Sceptile.png';
 import blaziken from '../images/Blaziken.png';
 import swampert from '../images/Swampert.png';
 
-
-
 function Game() {
     const allPokemon = [venosaur, charizard, blastoise, meganium, typhlosion, feraligatr, sceptile, blaziken, swampert];
     const [currentPokemon, setCurrentPokemon] = useState(allPokemon.slice(0,3));
@@ -28,7 +26,7 @@ function Game() {
             <Score currentScore={currentScore} highScore={highScore} />
             <div id='flex'>
                 {shuffle.map((image, i) => {
-                    return <Card 
+                    return <Card
                     key={i} 
                     image={image}
                     allPokemon={allPokemon}

@@ -14,3 +14,29 @@ img {
     height: 150px;
     width: 150px;
 }
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 4s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0.2;}
+    100% {opacity: 1;}
+}
+
+@media only screen and (max-width: 1000px) {
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #flex {
+        gap: 5px;
+        width: 310px;
+    }
+
+    #score {
+        font-size: .75em;
+    }
+}
