@@ -55,18 +55,20 @@ img {
     100% {opacity: 1;}
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
+    #score {
+        height: 75px;
+        width: 250px;
+        font-size: 1rem;
+    }
+
     img {
         height: 100px;
         width: 100px;
     }
 
-    #flex {
+    #pokemon-cards {
         gap: 5px;
         width: 310px;
-    }
-
-    #score {
-        font-size: .75em;
     }
 }
