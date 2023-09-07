@@ -1,13 +1,43 @@
-#flex {
+body {
+    background-image: url('./images/pokeballs.jpg');
+    font-family: 'Handjet', cursive;
+}
+
+#score {
+    text-align: center;
+    height: 100px;
+    width: 425px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 15px auto;
+    background-color: #FFF;
+    font-size: 2.2rem;
+}
+
+#score-left {
+    flex-grow: 1;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#score-right {
+    flex-grow: 1;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+#score-bottom {
+    flex-basis: 100%;
+    border: 1px solid black;
+}
+
+#pokemon-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     width: 470px;
     margin: 0 auto;
-}
-
-#score {
-    text-align: center;
 }
 
 img {
@@ -17,7 +47,7 @@ img {
 
 .fade-in {
     animation-name: fadeIn;
-    animation-duration: 4s;
+    animation-duration: 1.5s;
 }
 
 @keyframes fadeIn {

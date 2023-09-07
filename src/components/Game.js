@@ -18,22 +18,24 @@ function Game() {
     const [chosenPokemon, setChosenPokemon] = useState([]);
     const [currentScore, setCurrentScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
+    const [level, setLevel] = useState(1);
 
     const shuffle = currentPokemon.sort(() => Math.random() - 0.5);
     
     return (
         <div>
-            <Score currentScore={currentScore} highScore={highScore} />
-            <div id='flex'>
+            <Score currentScore={currentScore} highScore={highScore} chosenPokemon={chosenPokemon} level={level} />
+            <div id='pokemon-cards'>
                 {shuffle.map((image, i) => {
                     return <Card
-                    key={i} 
+                    key={i}
                     image={image}
                     allPokemon={allPokemon}
                     currentPokemon={currentPokemon} setCurrentPokemon={setCurrentPokemon}
                     chosenPokemon={chosenPokemon} setChosenPokemon={setChosenPokemon}
                     currentScore={currentScore} setCurrentScore={setCurrentScore}
                     highScore={highScore} setHighScore={setHighScore}
+                    level={level} setLevel={setLevel}
                     />
                 })}
             </div>
