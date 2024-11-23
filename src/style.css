@@ -38,6 +38,8 @@ body {
     gap: 10px;
     width: 470px;
     margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 img {

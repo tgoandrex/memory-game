@@ -27,16 +27,18 @@ function Game() {
             <Score currentScore={currentScore} highScore={highScore} chosenPokemon={chosenPokemon} level={level} />
             <div id='pokemon-cards'>
                 {shuffle.map((image, i) => {
-                    return <Card
-                    key={i}
-                    image={image}
-                    allPokemon={allPokemon}
-                    currentPokemon={currentPokemon} setCurrentPokemon={setCurrentPokemon}
-                    chosenPokemon={chosenPokemon} setChosenPokemon={setChosenPokemon}
-                    currentScore={currentScore} setCurrentScore={setCurrentScore}
-                    highScore={highScore} setHighScore={setHighScore}
-                    level={level} setLevel={setLevel}
-                    />
+                    return (
+                        <Card
+                            key={i}
+                            image={image}
+                            allPokemon={allPokemon}
+                            currentPokemon={currentPokemon} setCurrentPokemon={setCurrentPokemon}
+                            chosenPokemon={chosenPokemon} setChosenPokemon={setChosenPokemon}
+                            currentScore={currentScore} setCurrentScore={setCurrentScore}
+                            highScore={highScore} setHighScore={setHighScore}
+                            level={level} setLevel={setLevel}
+                        />
+                    )
                 })}
             </div>
         </div>
